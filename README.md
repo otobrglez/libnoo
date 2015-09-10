@@ -1,13 +1,18 @@
-# libnoo
+# noo
 
-[libnoo] is high-performance concurrent library for social media metrics collection.
+[noo] is high-performance concurrent library for social media metrics collection.
 
 ## Usage
 
-[libnoo] is writen in [Go] and since it is [DLL](https://en.wikipedia.org/wiki/Dynamic-link_library) / library
-you can use it from any programming language. This repository comes with examples for [Python](noo_test_in.py) and Ruby.
+[noo] is shared library writen in [Go] that can be used in `any` programming language.
+This repository comes with few examples for [Python](test/python/test.py) and [Ruby](test/ruby/test.rb).
 
 ## Development
+
+    mkvirtualenv --no-site-packages noo
+
+    sudo apt-get install libffi-dev # On Ubuntu
+    brew instal libffi              # On OSX with Homebrew
 
     make clean test
 
@@ -23,6 +28,5 @@ you can use it from any programming language. This repository comes with example
 
 - [Oto Brglez](http://github.com/otobrglez)
 
-
-[libnoo]:http://github.com/otobrglez/libnoo
+[noo]:http://github.com/otobrglez/noo
 [Go]:https://golang.org/
