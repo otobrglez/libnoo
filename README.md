@@ -1,18 +1,23 @@
 # libnoo
 
-[libnoo] is high-performance concurrent dynamic link library for social media metrics collection.
+[libnoo] is high-performance concurrent library for social media metrics collection.
 
 ## Usage
 
 [libnoo] is writen in [Go] and since it is [DLL](https://en.wikipedia.org/wiki/Dynamic-link_library) / library
-you can use it from any programming language, this repository comes with examples for [Python](noo_test_in.py) and Ruby.
+you can use it from any programming language. This repository comes with examples for [Python](noo_test_in.py) and Ruby.
 
 ## Development
 
-To compile `libnoo.so` just use:
+    make clean test
 
-    make
+## Resources
 
+- https://github.com/jbuberel/buildmodeshared
+- https://github.com/jbuberel/buildmodeshared/tree/master/gofrompython
+- https://github.com/jbuberel/buildmodeshared/tree/master/gofromgo
+- https://github.com/akrennmair/go-stfl
+- http://blog.golang.org/c-go-cgo
 
 ## Author
 
