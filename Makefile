@@ -9,6 +9,11 @@ test-env:
 clean:
 	rm -rf *.so *.a
 
+test-c: noo.so
+	gcc -Wall -O2 \
+		-o test-integration/c/test \
+		./test-integration/c/test.c \
+		./noo.so
 
 # .PHONY: clean test test-env
 #
