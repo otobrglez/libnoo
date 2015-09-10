@@ -5,7 +5,7 @@
 ## Usage
 
 [noo] is shared library writen in [Go] that can be used in `any` programming language.
-This repository comes with few examples for [C](test-integration/c/test.c), [Python](test-integration/python/test.py) and [Ruby](test-integration/python/test.rb).
+This repository comes with few examples for [C](test-integration/c/test.c), [Python](test-integration/python/test.py) and [Ruby](test-integration/ruby/test.rb).
 
 ## Development
 
@@ -14,7 +14,7 @@ This repository comes with few examples for [C](test-integration/c/test.c), [Pyt
     sudo apt-get install libffi-dev # On Ubuntu
     brew instal libffi              # On OSX with Homebrew
 
-    make clean test
+    make clean noo.so
 
 ## Resources
 
