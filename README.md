@@ -4,9 +4,8 @@
 
 ## Usage
 
-Since [libnoo] is [DLL](https://en.wikipedia.org/wiki/Dynamic-link_library) / library
-you can use it from any programming language, this repository comes with examples
-for [Python](noo_test_in.py) and Ruby.
+[libnoo] is writen in [Go] and since it is [DLL](https://en.wikipedia.org/wiki/Dynamic-link_library) / library
+you can use it from any programming language, this repository comes with examples for [Python](noo_test_in.py) and Ruby.
 
 ## Development
 
@@ -21,3 +20,4 @@ To compile `libnoo.so` just use:
 
 
 [libnoo]:http://github.com/otobrglez/libnoo
+[Go]:https://golang.org/
