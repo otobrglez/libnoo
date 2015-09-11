@@ -1,6 +1,6 @@
 # noo
 
-[noo] is high-performance concurrent library for social media metrics collection.
+[noo] is high-performance library for social media metrics collection.
 
 [![Build Status](https://travis-ci.org/otobrglez/noo.svg?branch=master)](https://travis-ci.org/otobrglez/noo)
 
@@ -10,6 +10,8 @@
 This repository comes with few examples for [C](test-integration/c/test.c), [Python](test-integration/python/test.py), [Ruby](test-integration/ruby/test.rb) and [Java](test-integration/java/NooTest.java).
 
 ## Development
+
+> This instructions are work in progress. Just check the code.
 
     # 1. Install Go >= 1.5
 
