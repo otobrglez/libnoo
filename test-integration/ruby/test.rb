@@ -3,7 +3,7 @@
 puts "Test: Ruby with Fiddle"
 
 require 'fiddle'
-libnoo = Fiddle.dlopen('./libnoo.so')
+libnoo = Fiddle.dlopen('noo.so')
 
 sum = Fiddle::Function.new(libnoo['Sum'], [Fiddle::TYPE_INT, Fiddle::TYPE_INT], Fiddle::TYPE_INT)
 hello_world = Fiddle::Function.new(libnoo['HelloWorld'], [], Fiddle::TYPE_VOIDP)

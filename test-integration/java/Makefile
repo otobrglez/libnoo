@@ -1,22 +1,24 @@
-.PHONY: clean
+.PHONY: clean build
 
-HelloWorld: HelloWorld.class
-	java HelloWorld
+build:
+	javac NooTest.java
+	javah -jni NooTest
 
-HelloWorld.class: libhelloworld.jnilib
-	javac HelloWorld.java
+	g++ \
+		-arch x86_64 -Xarch_x86_64 \
+		-stdlib=libstdc++ \
+		-Wall -g \
+		-I/System/Library/Frameworks/JavaVM.framework/Headers \
+		-fpic \
+		-lstdc++ \
+		-c NooTest.cpp \
+		-o NooTest.o \
+		-l noo.so
 
-HelloWorld.h:
-	javah -jni HelloWorld
-
-HelloWorld.o: HelloWorld.h
-	g++ -I/System/Library/Frameworks/JavaVM.framework/Headers \
-		-I../ \
-		-L../ \
-		-c HelloWorld.cpp
-
-libhelloworld.jnilib: HelloWorld.o
-	g++ -dynamiclib -L../../ -o libhelloworld.jnilib HelloWorld.o
+	g++ -dynamiclib -o libnootest.jnilib NooTest.o noo.so
 
 clean:
-	rm -rf *.h *.o *.class
+	rm -rf *.o *.class *.jnilib
+
+run: build
+	java NooTest

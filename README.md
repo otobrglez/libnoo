@@ -7,7 +7,7 @@
 ## Usage
 
 [noo] is shared library writen in [Go] that can be used in `any` programming language.
-This repository comes with few examples for [C](test-integration/c/test.c), [Python](test-integration/python/test.py) and [Ruby](test-integration/ruby/test.rb).
+This repository comes with few examples for [C](test-integration/c/test.c), [Python](test-integration/python/test.py), [Ruby](test-integration/ruby/test.rb) and [Java](test-integration/java/NooTest.java).
 
 ## Development
 

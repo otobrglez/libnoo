@@ -19,7 +19,7 @@ func HelloWorld() *C.char {
 	C.free(unsafe.Pointer(cs))
 
 	/* Returning * C.char */
-	return C.CString("Zdravo svet!")
+	return C.CString("Hello from Go!")
 }
 
 func main() {}

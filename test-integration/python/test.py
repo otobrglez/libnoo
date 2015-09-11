@@ -16,7 +16,7 @@ class GoString(ctypes.Structure):
     def __str__(self):
         return ctypes.string_at(self.p, self.n)
 
-Noo = ctypes.CDLL('./libnoo.so')
+Noo = ctypes.CDLL('noo.so')
 
 Noo.Sum.argtypes = [GoInt, GoInt]
 Noo.HelloWorld.argtypes = []
