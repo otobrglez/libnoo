@@ -1,9 +1,9 @@
 .PHONY: clean test-env test-c test-python test-ruby test-php test-java
 
-test: test-c test-python test-ruby
-
 noo.so: test-env
 	GOARCH=amd64 go build -ldflags="-shared" -buildmode=c-shared -o noo.so noo.go
+
+test: test-c test-python test-ruby
 
 test-env:
 	go version | grep 1.5

@@ -11,12 +11,21 @@ This repository comes with few examples for [C](test-integration/c/test.c), [Pyt
 
 ## Development
 
-    mkvirtualenv --no-site-packages noo
+    # 1. Install Go >= 1.5
 
+    # 2. To run Python examples
+    mkvirtualenv --no-site-packages noo && \
+      pip install --upgrade -r requirements.txt
+
+    # 3. Having FFI is a nice idea
     sudo apt-get install libffi-dev # On Ubuntu
     brew instal libffi              # On OSX with Homebrew
 
-    make clean noo.so
+    # Building 'noo.so'
+    make
+
+    # Running all 'integration tests'
+    make clean test
 
 ## Resources
 
@@ -25,6 +34,10 @@ This repository comes with few examples for [C](test-integration/c/test.c), [Pyt
 - https://github.com/jbuberel/buildmodeshared/tree/master/gofromgo
 - https://github.com/akrennmair/go-stfl
 - http://blog.golang.org/c-go-cgo
+- http://www.thegeekstuff.com/2013/01/mix-c-and-cpp/
+- http://stuf.ro/calling-c-code-from-java-using-jni
+- https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
+- https://isocpp.org/wiki/faq/mixing-c-and-cpp
 
 ## Author
 
