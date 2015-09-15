@@ -1,15 +1,21 @@
 .PHONY: clean test-env test-c test-python test-ruby test-php test-java
 
-noo.so: test-env
-	GOARCH=amd64 go build -ldflags="-shared" -buildmode=c-shared -o noo.so noo.go
+noo: test-env
+	go build -o noo noo.go
 
-test: test-c test-python test-ruby
+noo.so: test-env
+	go build -ldflags="-shared" -buildmode=c-shared -o noo.so noo.go
+
+test: noo
+	./noo -sites twitter,facebook http://databox.com
+
+test-integration: test-c test-python test-ruby
 
 test-env:
 	go version | grep 1.5
 
 clean:
-	rm -rf *.so *.a \
+	rm -rf noo *.so *.a \
 		./test-integration/c/test
 	cd ./test-integration/java && make clean
 
@@ -33,3 +39,6 @@ test-php: noo.so
 
 test-java: noo.so
 	cd ./test-integration/java/ && make run
+
+test-swift: noo.so
+	cd ./test-integration/swift/ && xcrun swift test.swift

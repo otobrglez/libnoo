@@ -4,6 +4,9 @@ package main
 // #include <stdlib.h>
 import "C"
 import "unsafe"
+import "fmt"
+// import "flag"
+import "runtime"
 
 //export Sum
 func Sum(a, b int) int {
@@ -22,4 +25,11 @@ func HelloWorld() *C.char {
 	return C.CString("Hello from Go!")
 }
 
-func main() {}
+func main() {
+  // wordPtr := flag.String("sites", "social", "a string")
+  // flag.Parse()
+  // fmt.Print("Sites ", *wordPtr, "\n")
+  // fmt.Println("tail:", flag.Args()[0], "\n")
+
+	fmt.Printf("Hello %s/%s\n", runtime.GOOS, runtime.GOARCH)
+}

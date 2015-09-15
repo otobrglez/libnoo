@@ -5,7 +5,7 @@
 /* Start of preamble from import "C" comments.  */
 
 
-#line 3 "/Users/otobrglez/go15-work/src/github.com/otobrglez/noo/noo.go"
+#line 3 "/Users/otobrglez/Projects/noo/noo.go"
  #include <stdio.h>
  #include <stdlib.h>
 
